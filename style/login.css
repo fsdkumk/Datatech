@@ -1,0 +1,179 @@
+/* General body styling */
+body {
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    margin: 0;
+}
+
+/* Global font and box-sizing settings */
+* {
+    font-family: cursive;
+    box-sizing: border-box;
+}
+
+/* Title styling */
+h1 {
+    text-align: center;
+    color: #000000;
+    margin-bottom: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Form styling */
+form {
+    width: 500px;
+    border: 2px solid rgb(209, 208, 208);
+    padding: 25px;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Heading styling */
+h2 {
+    text-align: center;
+    margin-bottom: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Input container styling */
+.input-container {
+    position: relative;
+    width: 100%;
+    margin: 10px 0;
+}
+
+/* Radio button container styling */
+.radio-container {
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+    margin-left: 135px;
+    gap: 10px; /* Adds space between each radio input and its label */
+}
+
+/* Ensure each radio button and label are aligned horizontally */
+.radio-container input[type="radio"] {
+    margin-right: 45px; /* Space between the radio button and label */
+}
+
+/* Label styling for the Admin option */
+.radio-container label[for="admin"] {
+    margin-left: 140px; /* Space between Admin label and Staff/Student radio button */
+    white-space: nowrap; /* Prevent text wrapping */
+    font-size: 14px; /* Adjust font size for the Admin label */
+    margin-top: -4px;
+}
+
+/* Label styling for the Staff/Student option */
+.radio-container label[for="staff-student"] {
+    margin-left: 215px; /* Space between radio button and label, adjust if needed */
+    white-space: nowrap; /* Prevent text wrapping */
+    font-size: 14px; /* Adjust font size for the Staff/Student label */
+    margin-top: -4px;
+}
+
+
+
+/* Input field styling */
+input[type="text"],
+input[type="password"] {
+    text-align: left;
+    display: block;
+    border: 3px solid #ccc;
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    outline: none;
+}
+
+/* Floating label styling */
+input:focus + label,
+input:not(:placeholder-shown) + label {
+    top: 3px;
+    left: 11px;
+    font-size: 0.6em;
+    color: #20b2aa;
+    transition: all 0.3s ease;
+}
+
+/* Label styling */
+label {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    padding: 0 5px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    font-size: 1em;
+    color: #888;
+}
+
+/* Toggle password button styling */
+.togglepassword {
+    position: absolute;
+    right: -190px;
+    top: 40%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1.0em;
+    color: #20b2aa;
+}
+
+/* Button styling */
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #20b2aa;
+    color: #fff;
+    border-radius: 5px;
+    margin: 5px auto;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Button hover effect */
+button:hover {
+    opacity: 0.8;
+}
+
+/* Error message styling */
+.error {
+    background: #F2DEDE;
+    color: #0c0101;
+    padding: 10px;
+    width: 90%;
+    border-radius: 5px;
+    margin: 20px auto;
+}
+
+/* Info text styling for registration */
+.info {
+    text-align: center;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+/* Specific styling for the Register button */
+.register-btn {
+    background: black;
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 auto;
+    border: none;
+    text-align: center;
+}
+
+/* Registration button hover effect */
+.register-btn:hover {
+    opacity: 0.8;
+}

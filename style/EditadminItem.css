@@ -1,0 +1,305 @@
+/* Global settings */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Header styling */
+.header {
+    background-color: #1c9892;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.logo {
+    height: 40px; /* Adjust this to match your desired logo height */
+    margin-right: 30px;
+}
+
+.header-left h1 {
+    font-size: 1.5em; /* Adjust the font size as needed */
+    font-family: 'Arial', sans-serif; /* Change the font family if desired */
+    margin: 0; /* Remove default margin */
+    line-height: 1; /* Set line height for centering vertically */
+    margin-bottom: -6px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Adjust the text shadow as needed */
+}
+
+.header-right {
+    position: relative;
+    margin-right: 20px;
+}
+
+/* Dropdown styling */
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropbtn {
+    background-color: #1c9892;
+    color: white;
+    padding: 14px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 0;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: transparent;
+}
+
+/* Sidebar styling */
+.sidebar {
+    margin-top: 60px; /* Height of header */
+    padding-top: 20px;
+    background-color: #f1f1f1;
+    width: 220px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.sidebar a {
+    padding: 15px 8px 15px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #111;
+    display: flex;
+    align-items: center; /* Align items vertically */
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #20b2aa;
+    color: white;
+}
+
+.nav-icon {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+
+/* Content styling */
+.content {
+    margin-top: 10px;
+    margin-left: 220px; /* Same as the sidebar width + some gap */
+    padding: 40px;
+    background-color: #f9f9f9;
+    flex: 1;
+}
+
+/* Style for h2 in the content area */
+.content h2 {
+    font-size: 24px; 
+    color: #000000; 
+    text-align: center; 
+    margin-bottom: -3px; 
+    font-weight: bold; 
+    letter-spacing: 1px; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
+}
+
+/* Form styling */
+form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: -5px; 
+}
+
+form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 1px; /* Adds a small gap below the label */
+    color: #333;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="file"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 5px; 
+    border: 2px solid #ccc;
+    border-radius: 5px; 
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="number"]:focus,
+form input[type="file"]:focus {
+    border-color: #1c9892; 
+    outline: none; 
+}
+
+form select {
+    width: 99%;
+    padding: 10px;
+    margin-bottom: 15px; /* Matches gap between form elements */
+    border: 2px solid #ccc;
+    border-radius: 4px; /* Rounded corners for consistency */
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+form select:focus {
+    border-color: #1c9892; /* Highlight border on focus */
+    outline: none; /* Removes default outline */
+}
+
+form button[type="submit"] {
+    background-color: #1c9892;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: -20px;
+    transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #147a6f;
+}
+
+form .form-section {
+    margin-bottom: 20px; /* Adds space between form sections */
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0; /* Separates sections visually */
+}
+
+
+/* Responsive styling */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 180px;
+    }
+
+    .content {
+        margin-left: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 150px;
+    }
+
+    .content {
+        margin-left: 150px;
+    }
+
+    .header-left h1 {
+        font-size: 1.2em;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    form label,
+    form input[type="text"],
+    form input[type="number"],
+    form input[type="file"],
+    form select,
+    form button[type="submit"] {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 5px;
+    }
+
+    .header-left, .header-right {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .header-left {
+        justify-content: center;
+    }
+
+    .header-right {
+        justify-content: flex-end;
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .sidebar a {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+
+    .content {
+        margin: 0;
+    }
+
+    .dropbtn {
+        padding: 10px;
+    }
+}

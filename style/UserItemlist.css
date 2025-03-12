@@ -1,0 +1,336 @@
+/* General body styling */
+body {
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Container styling */
+.container {
+    background: #fff;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Header styling */
+.header {
+    position: relative;
+}
+
+.header img {
+    width: 100%;
+    height: auto;
+}
+
+.header-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2.5em;
+    font-weight: 500;
+    text-shadow: #5b5959;
+    color: #fff;
+    margin-top: 60px;
+    margin-right: 40px;
+}
+
+.login a {
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.login a:hover {
+    background: transparent;
+}
+
+/* Navigation bar styling */
+.navbar {
+    background: #20b2aa;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+}
+
+.navbar li {
+    margin: 0 5px;
+}
+
+.navbar a {
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    text-decoration: none;
+    padding: 14px 13px;
+    display: block;
+}
+
+.navbar a:hover {
+    background: #17a1a1;
+    border-radius: 5px;
+}
+
+/* Content styling */
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Floating item list box styling */
+.item-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.item-box {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.item-box:hover {
+    transform: translateY(-10px); 
+}
+
+.item-image {
+    width: 50%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer; /* Pointer cursor for clickable images */
+}
+
+.item-info {
+    margin-top: 10px;
+}
+
+.item-type {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.quantityleft {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.0em;
+    color: #fff; /* White text color */
+    background-color: #aa2626; /* Red background color */
+    padding: 10px; /* Add some padding inside the box */
+    border-radius: 5px; /* Optional: rounded corners */
+    display: inline-block; /* Ensure the background color only wraps the text */
+    text-align: center; /* Center the text inside the box */
+}
+
+
+/* Footer styling */
+.footer {
+    background: #20b2aa;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Search form styling */
+.search-form {
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.search-form form {
+    display: inline-flex;
+    align-items: center;
+    width: 100%; 
+    max-width: 1200px; 
+    box-sizing: border-box; 
+}
+
+.search-form input[type="text"] {
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    width: 100%; 
+    max-width: 1200px; 
+    box-sizing: border-box; 
+}
+
+.search-form button {
+    padding: 8px 16px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #20b2aa;
+    border: 1px solid #20b2aa;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    outline: none;
+}
+
+.search-form button:hover {
+    background-color: #198f87;
+}
+
+
+/* Lightbox Styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border: 5px solid #fff;
+    object-fit: contain; /* Ensure the image scales correctly */
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/* Responsive styling */
+@media (max-width: 1024px) {
+    .header-content {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .title {
+        font-size: 2em;
+        margin-top: 20px;
+    }
+
+    .login a {
+        font-size: 0.9em;
+    }
+
+    .navbar a {
+        font-size: 12px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .item-box {
+        width: 30%; /* Adjust box size for medium screens */
+    }
+
+    .item-image {
+        height: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.8em;
+        margin-top: 15px;
+    }
+
+    .login a {
+        font-size: 0.85em;
+    }
+
+    .navbar a {
+        padding: 12px 10px;
+        font-size: 11px;
+    }
+
+    .item-box {
+        width: 45%; /* Adjust box size for smaller screens */
+    }
+
+    .item-image {
+        height: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.2em;
+        margin-top: 30px;
+        text-align: left;
+    }
+
+    .header-content {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .login a {
+        font-size: 0.8em;
+    }
+
+    .navbar ul {
+        flex-direction: row;
+        align-items: left;
+    }
+
+    .navbar a {
+        padding: 10px 8px;
+        font-size: 10px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .item-box {
+        width: 100%; /* Full width on extra small screens */
+    }
+
+    .item-image {
+        height: 140px;
+    }
+}

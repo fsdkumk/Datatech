@@ -1,0 +1,179 @@
+/* General body styling */
+body {    
+    background: #ffffff; /* White background */
+    display: flex;    
+    justify-content: center;    
+    align-items: center;    
+    height: 100vh;    
+    flex-direction: column;
+    margin: 0; /* Remove default margin */
+}
+
+/* Global font and box-sizing settings */
+* {
+    font-family:Arial, Helvetica, sans-serif; 
+    box-sizing: border-box; /* Ensures padding and borders are included in element's width and height */
+}
+
+/* Title styling */
+h1 {    
+    text-align: center;    
+    color: #000000;  /* Black color for title */
+    margin-bottom: 20px;  /* Space between the title and form */
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Form styling */
+form {    
+    width: 25%; /* Adjusted for a more typical form width */
+    border: 3px solid rgb(209, 208, 208);     
+    padding: 20px;    
+    background: rgb(255, 255, 255);    
+    border-radius: 10px;
+    margin-bottom: 50px; /* Space between forms */
+    box-shadow: 5px 5px 10px black;
+}
+
+/* Heading styling */
+h2 {    
+    text-align: center;   
+    margin-bottom: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Different font for headings */
+}
+
+/* Input container styling */
+.input-container {
+    position: relative; /* Allows for absolute positioning of the label and button */
+    width: 90%;
+    margin: 10px auto; /* Adjusted margin for spacing between inputs */
+}
+
+/* Input and select field styling */
+input, select {
+    text-align: left;
+    display: block;    
+    border: 1px solid #000000;    
+    width: 100%; /* Adjust width to make room for button */
+    padding: 15px;    
+    border-radius: 10px;
+    outline: none; /* Remove default focus outline */
+    position: relative; /* Ensure relative positioning for the label */
+    font-size: 1em; /* Ensure font consistency */
+    background-color: #fff; /* Ensure background consistency for select */
+    appearance: none; /* Remove default select dropdown arrow */
+}
+
+/* Floating label styling */
+input:focus + label,
+input:not(:placeholder-shown) + label,
+select:focus + label,
+select:not(:placeholder-shown) + label {
+    top: 3px; /* Move the label above the input */
+    left: 11px; /* Slight left positioning */
+    font-size: 0.6em; /* Smaller font size for the label */
+    color: rgb(69, 138, 140); /* Optional: Change the label color */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Adjust label styling to fit new input layout */
+label {
+    position: absolute; /* Absolute positioning to float the label */
+    top: 15px; /* Start at the same height as input padding */
+    left: 10px;
+    padding: 0 5px; /* Add padding for spacing */
+    pointer-events: none; /* Prevents label from being clicked */
+    transition: all 0.3s ease; /* Transition for smooth animation */
+    font-size: 1em; /* Default font size */
+    color: #888; /* Default label color */
+}
+
+/* Style for disabled option inside the select field */
+select option.disabled-option {
+    color: #888;
+}
+
+/* Custom dropdown arrow for select fields */
+select {
+    -webkit-appearance: none; /* Hides the default dropdown arrow in WebKit browsers */
+    -moz-appearance: none; /* Hides the default dropdown arrow in Firefox */
+    appearance: none; /* Hides the default dropdown arrow in other browsers */
+    background-image: url('path/to/custom-arrow-icon.svg'); /* Add a custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 15px center; /* Positions the custom arrow icon */
+}
+
+/* Toggle password button styling */
+.toggle-password {
+    position: absolute;
+    right: -150px; /* Position to the right inside the input container */
+    top: 40%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1.0em;
+    color: #20b2aa; /* Optional: color for the icon */
+}
+
+/* Button styling */
+button {
+    display: block;
+    width: 100%; /* Same width as the input fields */
+    padding: 25px;    
+    background: rgb(69, 138, 140);    
+    color: #fff;    
+    border-radius: 5px;    
+    margin: 5px auto;  /* Same horizontal centering as inputs */
+    border: none;
+    text-align: center; /* Center the button text */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+}
+
+/* Button hover effect */
+button:hover {    
+    opacity: 0.8; /* Slightly reduced opacity on hover */
+}
+
+/* Error message styling */
+.error {   
+    background: #F2DEDE;   
+    color: #0c0101;   
+    padding: 10px;   
+    width: 90%;   
+    border-radius: 5px;   
+    margin: 20px auto;
+}
+
+/* Info text styling for registration */
+.info {
+    text-align: center;
+    color: #000000; /* Black color for the "Don't have an account?" text */
+    margin-bottom: 10px; /* Space between text and button */
+}
+
+/* Specific styling for the Register button */
+.register-btn {
+    background: rgb(69, 138, 140);
+    color: #fff;
+    width: 90%; /* Ensure consistent width with other buttons */
+    padding: 15px;
+    border-radius: 10px;
+    margin: 0 auto; /* Center the button */
+    border: none;
+    text-align: center;
+}
+
+/* Registration button hover effect */
+.register-btn:hover {    
+    opacity: 0.8; /* Same hover effect as other buttons */
+    cursor: pointer;
+    background-color: #20b2aa;
+}
+
+/* Copyright text styling */
+.copyright {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.7rem;
+    color: #888;
+}

@@ -1,0 +1,207 @@
+/* Global settings */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Header styling */
+.header {
+    background-color: #1c9892;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.logo {
+    height: 40px; /* Adjust this to match your desired logo height */
+    margin-right: 30px;
+}
+
+.header-left h1 {
+    font-size: 1.5em; /* Adjust the font size as needed */
+    font-family: 'Arial', sans-serif; /* Change the font family if desired */
+    margin: 0; /* Remove default margin */
+    line-height: 1; /* Set line height for centering vertically */
+    margin-bottom: -6px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Adjust the text shadow as needed */
+}
+
+.header-right {
+    position: relative;
+    margin-right: 20px;
+}
+
+/* Dropdown styling */
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropbtn {
+    background-color: #1c9892;
+    color: white;
+    padding: 14px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    right: 0;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: transparent;
+}
+
+/* Sidebar styling */
+.sidebar {
+    margin-top: 60px; /* Height of header */
+    padding-top: 20px;
+    background-color: #f1f1f1;
+    width: 220px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.sidebar a {
+    padding: 15px 8px 15px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #111;
+    display: flex;
+    align-items: center; /* Align items vertically */
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #20b2aa;
+    color: white;
+}
+
+.nav-icon {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+/* Content and layout */
+.content {
+    margin-top: 60px;
+    margin-left: 220px; 
+    padding: 20px;
+    background-color: #f9f9f9;
+    flex: 1;   
+}
+/* Admin Information Box */
+.dashboard-box {
+    background-color: #f9f9f9; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    padding: 20px; 
+    margin: 20px auto; 
+    max-width: 600px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+/* Style for Edit button */
+.edit-btn {
+    background-color: #20b2aa; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 5px 10px; 
+    font-size: 0.9rem; 
+    cursor: pointer; 
+    margin-left: 15px; 
+    transition: background-color 0.3s ease; 
+}
+
+.edit-btn:hover {
+    background-color: #1a8f84; 
+}
+
+
+.change-btn {
+    background-color: #20b2aa; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 5px 10px; 
+    font-size: 0.9rem; 
+    cursor: pointer; 
+    margin-left: 15px; 
+    transition: background-color 0.3s ease; 
+}
+
+.change-btn:hover {
+    background-color: #1a8f84; 
+}
+
+.dashboard-box h3 {
+    font-size: 1.5rem; 
+    color: #333; 
+    border-bottom: 2px solid #20b2aa; 
+    padding-bottom: 8px; 
+    margin-bottom: 15px; 
+}
+
+.dashboard-box p {
+    font-size: 1rem;
+    color: #555; 
+    line-height: 1.6; 
+    margin: 8px 0; 
+}
+
+.dashboard-box p strong {
+    color: #20b2aa; 
+    font-weight: bold; 
+}
+
+.qrcode-image {
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    margin: 10px; 
+    text-align: center;
+}

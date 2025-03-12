@@ -1,0 +1,234 @@
+/* General body styling */
+body {
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Container styling */
+.container {
+    background: #fff;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Header styling */
+.header {
+    position: relative;
+}
+
+.header img {
+    width: 100%;
+    height: auto;
+}
+
+.header-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2.5em;
+    font-weight: 500;
+    color: #fff;
+    margin-top: 60px;
+    margin-right: 40px;
+}
+
+.login a {
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Navigation bar styling */
+.navbar {
+    background: #20b2aa;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+}
+
+.navbar li {
+    margin: 0 5px;
+}
+
+.navbar a {
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    text-decoration: none;
+    padding: 14px 13px;
+    display: block;
+}
+
+.navbar a:hover {
+    background: #17a1a1;
+    border-radius: 5px;
+}
+
+/* Profile Box Styling */
+.profile-box {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    margin: 20px auto;
+    padding: 20px;
+    width: 95%;
+    max-width: 1700px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Content styling */
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Form Section Styling */
+.form-section {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f9f9f9;
+    text-align: left;
+}
+
+.form-section h2 {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.form-section label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.form-section input[type="text"],
+.form-section input[type="email"],
+.form-section input[type="tel"],
+.form-section input[type="position"],
+.form-section select.position-select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+
+/* Additional styling for focus effect on inputs and select */
+.form-section input:focus,
+.form-section select.item-select:focus {
+    outline: none;
+    border-color: #20b2aa;
+}
+
+.item-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+/* Submit Button Styling */
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    background: #20b2aa;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background: #17a1a1;
+}
+
+
+/* Footer styling */
+.footer {
+    background: #20b2aa;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .profile-box {
+        width: 90%;
+    }
+
+    .navbar a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.2em;
+        margin-top: 30px;
+        text-align: left;
+    }
+
+    .header-content {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .login a {
+        font-size: 0.8em;
+    }
+
+    .navbar ul {
+        flex-direction: row;
+        align-items: left;
+    }
+
+    .navbar a {
+        padding: 10px 8px;
+        font-size: 10px;
+    }
+
+    .profile-box {
+        width: 95%;
+    }
+}

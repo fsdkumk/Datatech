@@ -1,0 +1,366 @@
+/* Global settings */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Header styling */
+.header {
+    background-color: #1c9892;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.logo {
+    height: 40px; /* Adjust this to match your desired logo height */
+    margin-right: 30px;
+}
+
+.header-left h1 {
+    font-size: 1.5em; 
+    font-family: 'Arial', sans-serif; 
+    margin: 0; 
+    line-height: 1; 
+    margin-bottom: -6px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+.header-right {
+    position: relative;
+    margin-right: 20px;
+}
+
+/* Dropdown styling */
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropbtn {
+    background-color: #1c9892;
+    color: white;
+    padding: 14px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 0;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: transparent;
+}
+
+/* Style for the dropdown */
+.status-dropdown {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: white; 
+    width: 120px; 
+    text-align: center;
+}
+
+/* Pending option in blue */
+.status-pending {
+    background-color: #1e90ff; 
+    color: white;
+}
+
+/* Approved option in green */
+.status-approved {
+    background-color: #28a745;
+    color: white;
+}
+
+/* Rejected option in red */
+.status-rejected {
+    background-color: #dc3545; 
+    color: white;
+}
+
+/* Sidebar styling */
+.sidebar {
+    margin-top: 60px; 
+    padding-top: 20px;
+    background-color: #f1f1f1;
+    width: 220px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.sidebar a {
+    padding: 15px 8px 15px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #111;
+    display: flex;
+    align-items: center; 
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #20b2aa;
+    color: white;
+}
+
+.nav-icon {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+
+/* Content styling */
+.content {
+    margin-top: 60px;
+    margin-left: 220px; 
+    padding: 20px;
+    background-color: #f9f9f9;
+    flex: 1;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+table thead tr {
+    background-color: #1c9892;
+    color: white;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tbody tr:hover {
+    background-color: #ddd;
+}
+
+table th {
+    background-color: #1c9892;
+    color: white;
+    font-weight: bold;
+}
+
+table td {
+    color: #333;
+}
+
+.filter-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+}
+.filter-buttons button {
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            color: white;
+            font-size: 16px;
+}
+.filter-buttons .all-status {
+    background-color: #000000;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 1.0em; 
+    margin-right: 5px;
+}
+.filter-buttons .rejected:hover {
+    background-color: rgb(60, 60, 60);
+}
+
+.filter-buttons .pending { 
+    background-color: blue;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 1.0em; 
+    margin-right: 5px;
+}
+.filter-buttons .pending:hover {
+    background-color: rgb(1, 1, 162);
+}
+
+.filter-buttons .approved { 
+    background-color: green; 
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 1.0em; 
+    margin-right: 5px;
+}
+.filter-buttons .approved:hover {
+    background-color: rgb(0, 72, 0);
+}
+
+.filter-buttons .rejected { 
+    background-color: red; 
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 1.0em; 
+    margin-right: 5px;
+}
+.filter-buttons .rejected:hover {
+    background-color: rgb(163, 1, 1);
+}
+
+/* Search Form Styling */
+.search-form {
+    display: flex;
+    justify-content: space-between; /* Aligns elements within the form */
+    width: 100%; /* Matches the table width */
+    max-width: 100%; /* Make sure it doesn't overflow */
+    margin-top: 20px; /* Space between title and form */
+    margin-bottom: 20px; /* Space between form and table */
+}
+
+.search-form input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    flex-grow: 1; /* Ensures the input takes as much space as possible */
+    margin-right: 10px;
+}
+
+.search-form button {
+    background-color: #1c9892;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.search-form button:hover {
+    background-color: #147a6f;
+}
+
+/* Responsive styling */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 180px;
+    }
+
+    .content {
+        margin-left: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 150px;
+    }
+
+    .content {
+        margin-left: 150px;
+    }
+
+    .header-left h1 {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 5px;
+    }
+
+    .header-left, .header-right {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .header-left {
+        justify-content: center;
+    }
+
+    .header-right {
+        justify-content: flex-end;
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .sidebar a {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+
+    .content {
+        margin: 0;
+    }
+
+    .dropbtn {
+        padding: 10px;
+    }
+}
